@@ -18,7 +18,7 @@ $countries = getAllRows("country");
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Aztrek</title>
   <link rel="shortcut icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=quango" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quango" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -33,7 +33,7 @@ $countries = getAllRows("country");
 <div class="page-header-inner">
 
   <div class="logo container">
-    <a href="index.html" title="Accueil"><img src="./images/aztreklogoBAT.svg" alt="Logo"></a>
+    <a href="index.php" title="Accueil"><img src="./images/aztreklogoBAT.svg" alt="Logo"></a>
   </div>
 
   <form action="#" class="search-form">
@@ -59,17 +59,14 @@ $countries = getAllRows("country");
 
     <div class="main-nav stellarnav">
     <ul class="">
-    <li><a href="#nav-country">Nos destinations</a>
-            <ul>
-                <?php foreach ($countries as $country) :?>
+    <?php foreach ($countries as $country) :?>
               <li><a href="country.php?id=<?= $country["id"]; ?>"><?= $country ["label"]?></a></li>
-                <?php endforeach;?>
-            </ul>
-          </li>
+                <?php endforeach;?></ul>
+                <ul><li><a href="#anc-sejours">Séjours à Thème</a></li>
+            <li> <a href="#anc-carnets">Carnets de Voyage</a></li>
+            <li><a href="#anc-commu">Communauté et Culture</a></li>
           </ul>
     </div>
-
-
 
   </nav><!-- .header-nav -->
 
