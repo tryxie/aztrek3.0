@@ -28,6 +28,9 @@ $countries = getAllRows("country");
 </head>
 
 <body class="home">
+
+ <!-- header page header  -->
+
 <header class="page-header">
 
 <div class="page-header-inner">
@@ -40,7 +43,8 @@ $countries = getAllRows("country");
 
     <h2 class="country">Nos Destinations</h2>
 
-    <select id="country" name="country">
+    <select id="country" name="country"> 
+         
       <option value="mexique">Mexique</option>
       <option value="guatemala">Guatemala</option>
       <option value="honduras">Honduras</option>
@@ -49,12 +53,11 @@ $countries = getAllRows("country");
     </select>
 
     <input type="date" id="date-start" name="date-start" placeholder="Date Départ">
-    <!-- <input type="date" id="date-end" name="date-end" placeholder="Date Retour"> -->
     <input type="submit" value="Valider">
 
   </form>
 
-  <!-- header navigation  -->
+  <!-- main navigation header-nav -->
   <nav class="header-nav">
 
     <div class="main-nav stellarnav">
@@ -62,7 +65,6 @@ $countries = getAllRows("country");
     <?php foreach ($countries as $country) :?>
               <li><a href="country.php?id=<?= $country["id"]; ?>"><?= $country ["label"]?></a></li>
                 <?php endforeach;?></ul>
-                <ul><li><a href="#anc-sejours">Séjours à Thème</a></li>
             <li> <a href="#anc-carnets">Carnets de Voyage</a></li>
             <li><a href="#anc-commu">Communauté et Culture</a></li>
           </ul>

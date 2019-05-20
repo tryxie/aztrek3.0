@@ -44,13 +44,11 @@ $countries = getAllRows("country");
     <div class="footer-col-inner">
       <h3>Rubriques principales</h3>
       <ul>
-        <li><a href="#" title="Destinations"></a>Destinations</li>
-        <li><a href="#" title="Séjours à Thème"></a>Séjours à Thème</li>
         <li><a href="#" title="Carnets de Voyage"></a>Carnets de Voyage</li>
         <li><a href="#" title="Bazar de Sacs"></a>Bazar de Sacs</li>
         <li><a href="#" title="A Propos"></a>A Propos</li>
-        <li><a href="#" title="L'équipe de guides">L'équipe de guides</a></li>
-        <li><a href="#" title="Carrières">Carrières</a></li>
+        <li><a href="#" title="L'équipe de guides"></a>L'équipe de guides</li>
+        <li><a href="#" title="Carrières"></a>Carrières</li>
       </ul>
     </div>
 

@@ -9,7 +9,7 @@ $connection = new PDO("mysql:dbname=" . DB_NAME . ";host=" . DB_HOST, DB_USER, D
 ]);
 
 /**
- * Rechercher l'ensemble des lignes d'un table
+ * Rechercher l'ensemble des lignes d'une table
  * @param string $table Nom de la table
  * @param string|null $orderby Tri
  * @param int|null $limit Limite

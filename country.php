@@ -10,20 +10,29 @@ $sejours = getAllSejoursByCountry($id);
 getHeader($country["label"]);
 ?>
 
+ <!-- content-header picto-country -->
+
 <div class="content-header service-header">
     <img src="images/picto-country/<?= $country["picto"]; ?>" alt="<?= $country["label"]; ?>">
-    <h1><?= $country["label"]; ?></h1>
-</div>
+    </div>
 
-<section class="container">
+<!-- content-main container -->
+    <section class="container">
+    <h1>Le <?= $country["label"]; ?></h1>
+    <p><?= $country["description"]; ?></p>
+
 
     <div class="services-grid">
-
         <?php foreach ($sejours as $sejour) : ?>
             <article>
-                <h2><?= $sejour["titre"]; ?></h2>
-                <img src="images/<?= $sejour["photo"]; ?>" alt="">
             
+                <h2><?= $sejour["titre"]; ?></h2>
+                
+
+                <p><?= $sejour["duree"]; ?> Jours</p>
+                
+                <?= $sejour["difficulte"]; ?><img src="../images/site-icon/etoileB.png"></p>
+             
 
                 <a href="sejour.php?id=<?= $sejour["id"]; ?>" class="btn">
                     Voir cette destination...
@@ -32,6 +41,12 @@ getHeader($country["label"]);
         <?php endforeach; ?>
 
     </div>
+
+</section>
+
+<!-- content-temoignages container -->
+
+<section>
 
 </section>
 
