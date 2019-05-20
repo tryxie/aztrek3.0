@@ -1,0 +1,53 @@
+
+.section-voyage {
+    padding: 40px 0;
+    background: $light-green;
+    text-align: center;
+   
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+  }
+  
+  .gallery figure {
+    max-width: 320px;
+    margin: 40px 15px 40px;
+    box-shadow: 0 4px 20px $light-yellow;
+  }
+  
+  @media (min-width: 961px) {
+  
+    .gallery figure {
+      position: relative;
+      overflow: hidden;    
+    }
+  
+    .gallery figure img {
+      transition: 0.5S;
+    }
+  
+    .gallery figure:hover img {
+      filter: grayscale(0.5);
+    }
+  
+    .gallery figcaption {
+      position: absolute;
+      bottom: -50px;;
+      width: 100%;
+      padding: 1rem;
+      background-color: rgba(12, 49, 34, 0.5);
+      color: #fff;
+      opacity: 0;
+      transition: 0.5s;
+    }
+  
+    .gallery figure:hover figcaption {
+      opacity: 1;
+      bottom: 0;
+    }
+  
+  }

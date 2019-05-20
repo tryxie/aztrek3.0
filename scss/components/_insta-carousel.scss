@@ -1,0 +1,36 @@
+.insta-carousel-wrapper {
+    background-color: $light-green;
+    text-align: center;
+
+}
+
+.insta-carousel {
+    padding: 80px 0 60px;
+  }
+  
+  .insta-content {
+    display: block;
+    position: relative;
+  }
+  
+  .owl-nav button {
+    position: absolute;
+    top: $spacer;
+  
+    @media (min-width: $bp-large) {
+      top: calc(50% - 1.5rem);
+    }
+  
+    &.owl-prev {
+      left: $spacer;
+    }
+  
+    &.owl-next {
+      right: $spacer;
+    }
+  
+    .fas {
+      font-size: 3rem;
+      color: #fff;
+    }
+  }

@@ -1,0 +1,33 @@
+.page-header{
+  background: url('../images/header-bg.png') center top;
+  background-size: cover;
+  box-shadow: 0 4px 20px $green;
+
+  
+  @media (min-width: $bp-medium){
+  
+    
+  }
+}
+
+.page-header-inner{
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $bp-medium){
+   
+    
+  }
+
+}
+
+.logo {
+  img{
+    width: 250px;
+    padding-top: 20px;
+  }
+}

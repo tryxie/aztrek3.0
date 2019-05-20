@@ -1,0 +1,30 @@
+// Puces
+@mixin puce($size, $bgCol) {
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $bgCol;
+    margin-right: $size;
+  }
+
+}
+
+@mixin button($bgCol, $fsize) {
+  display: inline-block;
+  font-size: $fsize;
+  padding: 0.5em 1em;
+  color: #fff;
+  background-color: $bgCol;
+  border-radius: 4px;
+  transition: 0.5s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    background-color: darken($bgCol, 10%);
+  }
+}

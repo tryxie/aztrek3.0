@@ -1,0 +1,25 @@
+{
+    "git.ignoreLimitWarning": true,
+    "sqltools.connections": [
+        {
+            "connectionTimeout": 30,
+            "database": "vente_en_ligne",
+            "dialect": "MySQL",
+            "name": "vente en ligne",
+            "password": "root",
+            "port": 8889,
+            "server": "127.0.0.1",
+            "username": "root"
+        },
+        {
+            "connectionTimeout": 30,
+            "database": "aztrekdata",
+            "dialect": "MySQL",
+            "name": "localhost",
+            "password": "C'3stLaV13!",
+            "port": 8889,
+            "server": "127.0.0.1",
+            "username": "Tryxie"
+        }
+    ]
+}

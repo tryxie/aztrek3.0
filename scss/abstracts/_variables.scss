@@ -1,0 +1,22 @@
+// Colors
+$red       : #f84242;
+$dark-red  : #d43839;
+$gray      : #cfcfcf;
+$dark-gray : #a7a7a7;
+$light-gray: #e5e5e5;
+$green       : #184A45;
+$light-green       : rgba(24, 74, 69, 0.2);
+$light-yellow: #FDF9F0;
+$yellow: rgba(245, 214, 148, 0.425);
+
+$link-color: $green;
+
+// Typos
+$font-default: 'Montserrat', sans-serif;
+$font-title  : 'Quango',      $font-default;
+
+// Layout
+$max-width: 1200px;
+$bp-medium: 768px;
+$bp-large : 992px;
+$spacer   : 15px;
