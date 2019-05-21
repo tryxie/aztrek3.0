@@ -31,7 +31,10 @@ getHeader($country["label"]);
 
                 <p><?= $sejour["duree"]; ?> Jours</p>
                 
-                <?= $sejour["difficulte"]; ?><img src="../images/site-icon/etoileB.png"></p>
+                <?php for($i = 0; $i < $sejour["difficulte"]; $i++) : ?>
+                    <img src="./images/site-icon/etoileB.png">
+                <?php endfor; ?>
+                </p>
              
 
                 <a href="sejour.php?id=<?= $sejour["id"]; ?>" class="btn">

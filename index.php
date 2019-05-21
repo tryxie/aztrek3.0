@@ -5,7 +5,6 @@
     require_once "model/database.php";
     
     $services = getAllRows("country");
-    $testimonies = getAllRows("temoignage");
     // $testimonies = getAllRows("temoignage", "date_creation DESC", 3);
     
     getHeader("Accueil");
@@ -21,7 +20,8 @@
       <div class="section1-inner container">
 
         <article class="section1-article ">
- <h2>Notre Engagement</h2>
+
+         <h2>Notre Engagement</h2>
           <p>Ecouter vos besoins, répondre à vos attentes et construire ensemble VOTRE voyage, celui dont vous avez
             toujours rêvé. Avec ou sans guide, chez l’habitant ou en lodge de luxe, c’est vous qui choisissez. Nous vous
             accompagnons à chaque étape pour vous donner les meilleurs conseils dans la préparation et l’organisation de

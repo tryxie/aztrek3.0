@@ -92,8 +92,6 @@ function getUtilisateurByEmailMotDePasse(string $email, string $password) {
 }
 
 
-
-
 function getAllSejoursByCountry(int $id) {
     global $connection;
 

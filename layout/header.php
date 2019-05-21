@@ -65,7 +65,7 @@ $countries = getAllRows("country");
     <?php foreach ($countries as $country) :?>
               <li><a href="country.php?id=<?= $country["id"]; ?>"><?= $country ["label"]?></a></li>
                 <?php endforeach;?></ul>
-            <li> <a href="#anc-carnets">Carnets de Voyage</a></li>
+                <ul><li> <a href="#anc-carnets">Carnets de Voyage</a></li>
             <li><a href="#anc-commu">Communauté et Culture</a></li>
           </ul>
     </div>
