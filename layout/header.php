@@ -39,17 +39,19 @@ $countries = getAllRows("country");
     <a href="index.php" title="Accueil"><img src="./images/aztreklogoBAT.svg" alt="Logo"></a>
   </div>
 
-  <form action="#" class="search-form">
+  <form action="country.php" class="search-form">
 
     <h2 class="country">Nos Destinations</h2>
 
     <select id="country" name="country"> 
-         
-      <option value="mexique">Mexique</option>
-      <option value="guatemala">Guatemala</option>
+    <ul class="">
+      <option value="country"><?php foreach ($countries as $country) :?>
+              <li><a href="country.php?id=<?= $country["id"]; ?>"><?= $country ["label"]?></a></li>
+                <?php endforeach;?></option></ul>
+      <!-- <option value="guatemala">Guatemala</option>
       <option value="honduras">Honduras</option>
       <option value="salvador">El Salvador</option>
-      <option value="costa-rica">Costa-Rica</option>
+      <option value="costa-rica">Costa-Rica</option> -->
     </select>
 
     <input type="date" id="date-start" name="date-start" placeholder="Date Départ">

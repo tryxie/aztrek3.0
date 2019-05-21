@@ -5,7 +5,6 @@
     require_once "model/database.php";
     
     $services = getAllRows("country");
-    // $testimonies = getAllRows("temoignage", "date_creation DESC", 3);
     
     getHeader("Accueil");
     ?>

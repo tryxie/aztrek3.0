@@ -179,7 +179,19 @@ function updateCountry(int $id, string $label, string $picto) {
     $stmt->execute();
 }
 
+    function getAllTemoignagesBySejour(int $id) {
+    global $connection;
 
+    $query = "
+        SELECT *
+        FROM temoignage
+        WHERE temoignage.sejour_id = :id
+    ";
 
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
 
+    return $stmt->fetchAll();
+}
 

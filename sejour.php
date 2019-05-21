@@ -5,7 +5,7 @@ require_once "model/database.php";
 $id = $_GET["id"]; // Récupérer le paramètre id dans l'URL
 
 $sejour = getOneRow("sejour", $id);
-$temoignage = getAllRows("temoignage", $id);
+$temoignage = getAllTemoignagesBySejour($id);
 
 getHeader($sejour["titre"]);
 ?>
@@ -30,6 +30,15 @@ getHeader($sejour["titre"]);
         <p>Les meilleures photos et récits d'aventure de nos voyageurs</p>
         <p><?= $temoignage["contenu"]; ?></p>
       
+
+        <?php foreach ($temoignages as $temoignage) : ?>
+            <article>
+            
+                <p><?= $temoignage["contenu"]; ?><p>
+                <a href="sejour.php?id=<?= $sejour["id"]; ?>" class="btn">Voir cette destination...
+                </a>
+            </article>
+        <?php endforeach; ?>
 
       <div class="gallery container">
          
