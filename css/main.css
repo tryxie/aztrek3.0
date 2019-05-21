@@ -516,9 +516,7 @@ a:hover {
     height: 100%;
     display: flex;
     flex-direction: column;
-  }
-  .services-inner .services-col .services-article .more {
-    text-align: right;
+    align-items: flex-start;
   }
 }
 .services-inner .services-col:nth-of-type(1) {

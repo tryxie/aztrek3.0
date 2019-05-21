@@ -12,44 +12,38 @@ getHeader($country["label"]);
 
 <!-- content-header picto-country -->
 
-<div class="content-header service-header">
+<div class="content-header service-header container">
     <img src="images/picto-country/<?= $country["picto"]; ?>" alt="<?= $country["label"]; ?>">
+<h1><?= $country["label"]; ?></h1>
+<p><?= $country["description"]; ?></p>
 </div>
 
-<!-- content-main container -->
-<section class="container">
-    <h1><?= $country["label"]; ?></h1>
-    <p><?= $country["description"]; ?></p>
 
-
-    <article class="country-grid">
-        <div class="sejour-vignette">
-
+<section class="services" id='anc-sejours'>
+    <div class="services-inner">
+        
             <?php foreach ($sejours as $sejour) : ?>
-            <article class="services.col">
-                <div class="presentation">
-                    <h2><?= $sejour["titre"]; ?></h2>
-                </div>
-
-                <div class="presentation2">
-                    <p><?= $sejour["duree"]; ?> Jours</p>
-               
-
-                <?php for($i = 0; $i < $sejour["difficulte"]; $i++) : ?>
-                <img src="./images/site-icon/etoileB.png">
+            <article class="services-col">
+            <div class="services-article">
+                <h2><?= $sejour["titre"]; ?></h2>
+                <p><?= $sejour["duree"]; ?> Jours</p>
+                <p>Difficulté: </p>
+                <div class="diff">
+                <?php for($i = 0; $i < $sejour["difficulte"]; $i++) : ?> 
+                <img class="etoileB" src="./images/site-icon/etoileBB.png">
                 <?php endfor; ?>
-                </p>
                 </div>
-
 
                 <a href="sejour.php?id=<?= $sejour["id"]; ?>" class="btn">
                     Voir cette destination...
                 </a>
+            </div>
+
             </article>
             <?php endforeach; ?>
-        </div>
 
-    </article>
+       
+    </div>
 
 </section>
 
