@@ -452,9 +452,6 @@ a:hover {
 
 .stellarnav .menu-toggle {
   font-size: 0;
-  position: absolute;
-  top: 20px;
-  right: 20px;
 }
 .stellarnav .menu-toggle span.bars {
   margin-right: 0;

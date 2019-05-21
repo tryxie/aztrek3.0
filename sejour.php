@@ -18,6 +18,7 @@ getHeader($sejour["titre"]);
 
 
 <h2><?= $sejour["chapeau"]; ?></h2>
+
 <img src="images/<?= $sejour["photo"]; ?>" alt="<?= $country["label"]; ?>">
 
     <p><?= $sejour["description"]; ?></p>
@@ -28,13 +29,12 @@ getHeader($sejour["titre"]);
         <h1 class="hidden-text">Carnets de Voyage</h1>
         <h2><a href="#">Carnets de Voyage</a></h2>
         <p>Les meilleures photos et récits d'aventure de nos voyageurs</p>
-        <p><?= $temoignage["contenu"]; ?></p>
       
 
         <?php foreach ($temoignages as $temoignage) : ?>
             <article>
-            
                 <p><?= $temoignage["contenu"]; ?><p>
+                <img src="images/6518.png" alt="horizon">
                 <a href="sejour.php?id=<?= $sejour["id"]; ?>" class="btn">Voir cette destination...
                 </a>
             </article>

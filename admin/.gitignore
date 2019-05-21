@@ -1,1 +1,7 @@
+.DS_Store
+_DS_Store
 node_modules/
+uploads/
+*.bak
+config/parameters.php
+.sass-cache/

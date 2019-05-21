@@ -148,36 +148,7 @@ function getAllTagsBySejour(int $id) {
     return $stmt->fetchAll();
 }
 
-function insertCountry(string $label, string $picto) {
-    global $connection;
 
-    $query = "
-        INSERT INTO country (label, picto)
-        VALUES (:label, :picto)
-    ";
-
-    $stmt = $connection->prepare($query);
-    $stmt->bindParam(":label", $label);
-    $stmt->bindParam(":picto", $picto);
-    $stmt->execute();
-}
-
-function updateCountry(int $id, string $label, string $picto) {
-    global $connection;
-
-    $query = "
-        UPDATE country
-        SET label = :label,
-            picto = :picto
-        WHERE id = :id
-    ";
-
-    $stmt = $connection->prepare($query);
-    $stmt->bindParam(":id", $id);
-    $stmt->bindParam(":label", $label);
-    $stmt->bindParam(":picto", $picto);
-    $stmt->execute();
-}
 
     function getAllTemoignagesBySejour(int $id) {
     global $connection;

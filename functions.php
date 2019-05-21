@@ -4,10 +4,6 @@ function getHeader(string $label) {
     require_once "layout/header.php";
 }
 
-function getNav() {
-    require_once "layout/nav.php";
-}
-
 function getFooter() {
     require_once "layout/footer.php";
 }
