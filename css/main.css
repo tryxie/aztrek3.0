@@ -516,7 +516,15 @@ a:hover {
     height: 100%;
     display: flex;
     flex-direction: column;
+  }
+  .services-inner .services-col .services-article .diff {
+    display: flex;
+  }
+  .services-inner .services-col .services-article .diff .etoileB {
     align-items: flex-start;
+  }
+  .services-inner .services-col .services-article .diff .more {
+    text-align: right;
   }
 }
 .services-inner .services-col:nth-of-type(1) {
@@ -636,6 +644,28 @@ footer {
   color: #31978d;
 }
 .social-nav ul li a .fab {
+  font-size: 3rem;
+}
+
+.footer-sitenav {
+  margin: 30px 0;
+}
+.footer-sitenav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer-sitenav ul li {
+  margin: 15px;
+}
+.footer-sitenav ul li a {
+  color: #fff;
+  transition: 0.3s;
+}
+.footer-sitenav ul li a:hover {
+  color: #31978d;
+}
+.footer-sitenav ul li a .fab {
   font-size: 3rem;
 }
 

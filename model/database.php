@@ -8,6 +8,11 @@ $connection = new PDO("mysql:dbname=" . DB_NAME . ";host=" . DB_HOST, DB_USER, D
     PDO::ATTR_EMULATE_PREPARES => false
 ]);
 
+// Chargement automatique des fichiers contenus dans le dossier "entities"
+foreach (glob(__DIR__ . "/entities/*.php") as $file) {
+    require_once $file;
+}
+
 /**
  * Rechercher l'ensemble des lignes d'une table
  * @param string $table Nom de la table
@@ -157,6 +162,25 @@ function getAllTagsBySejour(int $id) {
         SELECT *
         FROM temoignage
         WHERE temoignage.sejour_id = :id
+    ";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+    function getAllEtapesBySejour(int $id) {
+    global $connection;
+
+    $query = "
+        SELECT
+            etape.*,
+            sejour.titre AS sejour
+        FROM etape
+        INNER JOIN sejour ON etape.sejour_id = sejour.id
+        WHERE etape.sejour_id = :id
     ";
 
     $stmt = $connection->prepare($query);

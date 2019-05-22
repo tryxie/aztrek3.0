@@ -32,7 +32,11 @@
         flex-direction: column;
 
         .diff {
-          align-items: flex-start;
+          display: flex;
+
+          .etoileB {
+            align-items: flex-start;
+          }
 
         .more {
           text-align: right;

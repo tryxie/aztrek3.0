@@ -5,7 +5,8 @@ require_once "model/database.php";
 $id = $_GET["id"]; // Récupérer le paramètre id dans l'URL
 
 $sejour = getOneRow("sejour", $id);
-$temoignage = getAllTemoignagesBySejour($id);
+$temoignages = getAllTemoignagesBySejour($id);
+$etapes = getAllEtapesBySejour($id);
 
 getHeader($sejour["titre"]);
 ?>
@@ -16,7 +17,6 @@ getHeader($sejour["titre"]);
     <h1><?= $sejour["titre"]; ?></h1>
 </div>
 
-
 <h2><?= $sejour["chapeau"]; ?></h2>
 
 <img src="images/<?= $sejour["photo"]; ?>" alt="<?= $country["label"]; ?>">
@@ -24,6 +24,27 @@ getHeader($sejour["titre"]);
     <p><?= $sejour["description"]; ?></p>
     <p><?= $sejour["accroche"]; ?></p>
 </section>
+
+<section class = "section-etape container">
+<h1 class="hidden-text">Etapes du Séjour</h1>
+        <h2><a href="#">Les Etapes</a></h2>
+        <p>votre séjour jour après jour</p>
+      
+
+        <?php foreach ($etapes as $etape) : ?>
+            <article>
+            <img src="images/site-icon/<?= $etape["photo"]; ?>" alt="<?= $sejour["titre"]; ?>">
+            <span>Jour : <?= $etape["jour"]; ?></span>
+                <p> Itinéraire : <?= $etape["titre"]; ?><p>
+                <p><?= $etape["description"]; ?><p>
+                <p><?= $etape["information"]; ?><p>
+               
+            </article>
+        <?php endforeach; ?>
+
+    
+
+    </section><!-- .section-3 -->
 
 <section class="section-voyage" id='anc-carnets'>
         <h1 class="hidden-text">Carnets de Voyage</h1>
@@ -40,15 +61,7 @@ getHeader($sejour["titre"]);
             </article>
         <?php endforeach; ?>
 
-      <div class="gallery container">
-         
-        <figure>
-          <img src="images/6518.png" alt="horizon">
-          <figcaption>Là c'est moi Patrick, je regarde l'horizon. Nous étions arrivés dans les plaines décharnées de l'ouest mexicain. Un moment de plénitude que j'ai voulu avec vous. Merci Aztrek, ce voyage était exceptionnel</figcaption>
-        </figure>
-        <figure>
-          
-      </div><!-- .gallery -->
+    
 
     </section><!-- .section-3 -->
 

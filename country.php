@@ -10,14 +10,20 @@ $sejours = getAllSejoursByCountry($id);
 getHeader($country["label"]);
 ?>
 
-<!-- content-header picto-country -->
+<!-- section1 country -->
 
-<div class="content-header service-header container">
+<section class="section1">
     <img src="images/picto-country/<?= $country["picto"]; ?>" alt="<?= $country["label"]; ?>">
+
+    <div class="section1-inner container">
+    <article class="section1-article ">
 <h1><?= $country["label"]; ?></h1>
 <p><?= $country["description"]; ?></p>
+</article>
 </div>
+</section>
 
+<!-- section2 services=sejours -->
 
 <section class="services" id='anc-sejours'>
     <div class="services-inner">
@@ -26,8 +32,8 @@ getHeader($country["label"]);
             <article class="services-col">
             <div class="services-article">
                 <h2><?= $sejour["titre"]; ?></h2>
+                
                 <p><?= $sejour["duree"]; ?> Jours</p>
-                <p>Difficulté: </p>
                 <div class="diff">
                 <?php for($i = 0; $i < $sejour["difficulte"]; $i++) : ?> 
                 <img class="etoileB" src="./images/site-icon/etoileBB.png">

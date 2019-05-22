@@ -79,3 +79,31 @@ footer {
     }
   }
 }
+
+.footer-sitenav {
+  margin: 30px 0;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      margin: 15px;
+
+      a {
+        color: #fff;
+        transition: 0.3s;
+
+        &:hover{
+          color: lighten($green, 20%);
+        }
+
+        .fab {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+

@@ -5,6 +5,7 @@
     require_once "model/database.php";
     
     $services = getAllRows("country");
+    $temoignages = getAllTemoignages();
     
     getHeader("Accueil");
     ?>
@@ -137,6 +138,14 @@
         <h2><a href="#">Carnets de Voyage</a></h2>
         <p>Les meilleures photos et récits d'aventure de nos voyageurs</p>
       
+        <?php foreach ($temoignages as $temoignage) : ?>
+            <article>
+                <p><?= $temoignage["contenu"]; ?></p>
+                <img src="images/<?= $temoignage["photo"]; ?>" alt="">
+                <p><?= $temoignage["utilisateur"]; ?></p>
+            </article>
+        <?php endforeach; ?>
+
 
       <div class="gallery container">
          

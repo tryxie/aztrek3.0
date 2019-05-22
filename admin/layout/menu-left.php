@@ -11,13 +11,13 @@
             <li class="nav-item">
                 <a class="nav-link <?php echo isActive("/crud/recette/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/recette/">
                     <i class="fa fa-cutlery"></i>
-                    Recettes
+                    Séjours
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link <?php echo isActive("/crud/categorie/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/categorie/">
                     <i class="fa fa-book"></i>
-                    Catégories
+                    Destinations
                 </a>
             </li>
             <li class="nav-item">
@@ -29,7 +29,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fa fa-comments"></i>
-                    Commentaires
+                    Témoignages
                 </a>
             </li>
         </ul>
