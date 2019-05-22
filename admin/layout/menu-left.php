@@ -9,27 +9,15 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <?php echo isActive("/crud/recette/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/recette/">
-                    <i class="fa fa-cutlery"></i>
-                    Séjours
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link <?php echo isActive("/crud/categorie/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/categorie/">
-                    <i class="fa fa-book"></i>
+                <a class="nav-link <?php echo isActive("/crud/country/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/country/">
+                    <i class="fa fa-server"></i>
                     Destinations
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-tags"></i>
-                    Tags
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-comments"></i>
-                    Témoignages
+                <a class="nav-link <?php echo isActive("/crud/sejour/") ? 'active' : ''; ?>" href="<?php echo SITE_ADMIN; ?>crud/sejour/">
+                    <i class="fa fa-book"></i>
+                    Séjours
                 </a>
             </li>
         </ul>

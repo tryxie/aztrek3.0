@@ -548,6 +548,11 @@ a:hover {
 .section1 {
   background-color: #FDF9F0;
 }
+.section1 .picto {
+  max-width: 30%;
+  height: auto;
+  display: block;
+}
 
 .section1-article {
   padding: 200px 100px;

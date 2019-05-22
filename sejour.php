@@ -56,8 +56,6 @@ getHeader($sejour["titre"]);
             <article>
                 <p><?= $temoignage["contenu"]; ?><p>
                 <img src="images/6518.png" alt="horizon">
-                <a href="sejour.php?id=<?= $sejour["id"]; ?>" class="btn">Voir cette destination...
-                </a>
             </article>
         <?php endforeach; ?>
 

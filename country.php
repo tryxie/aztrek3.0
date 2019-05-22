@@ -13,7 +13,9 @@ getHeader($country["label"]);
 <!-- section1 country -->
 
 <section class="section1">
-    <img src="images/picto-country/<?= $country["picto"]; ?>" alt="<?= $country["label"]; ?>">
+    <div class="picto">
+    <img  src="uploads/country/<?= $country["picto"]; ?>" alt="<?= $country["label"]; ?>">
+</div>
 
     <div class="section1-inner container">
     <article class="section1-article ">
