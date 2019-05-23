@@ -78,26 +78,28 @@ function deleteRow(string $table, int $id) {
     return null;
 }
 
-function getUtilisateurByEmailMotDePasse(string $email, string $password) {
-    global $connection;
 
-    $query = "
-        SELECT *
-        FROM utilisateur
-        WHERE utilisateur.email = :email
-        AND utilisateur.mot_de_passe = SHA1(:password)
-    ";
-
-    $stmt = $connection->prepare($query);
-    $stmt->bindParam(":email", $email);
-    $stmt->bindParam(":password", $password);
-    $stmt->execute();
-
-    return $stmt->fetch();
-}
+/**
+ * Informations et liens vers reseaux sociaux
+ */
 
 
+// function getAllReseaux() {
+//     global $connection;
+
+//     $query = "
+//         SELECT
+//             reseaux.*,
+//         FROM reseaux
+//     ";
+
+//     $stmt = $connection->prepare($query);
+//     $stmt->execute();
+
+//     return $stmt->fetchAll();
+// }
 
 
+   
 
 

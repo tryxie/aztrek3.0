@@ -39,7 +39,7 @@ $countries = getAllRows("country");
     <a href="index.php" title="Accueil"><img src="./images/aztreklogoBAT.svg" alt="Logo"></a>
   </div>
 
-  <form action="#" class="search-form">
+  <!-- <form action="#" class="search-form">
 
     <h2 class="country">Nos Destinations</h2>
 
@@ -50,7 +50,7 @@ $countries = getAllRows("country");
     </select>
     <input type="submit" value="Valider">
 
-  </form>
+  </form> -->
 
   <!-- main navigation header-nav -->
   <nav class="header-nav">

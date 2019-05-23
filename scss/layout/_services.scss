@@ -38,13 +38,13 @@
             align-items: flex-start;
           }
 
-          .more {
-            text-align: right;
-          }
+        .more {
+          text-align: right;
         }
       }
+    }
 
-
+    
     }
 
 
@@ -76,16 +76,8 @@
 
 }
 
-
 .section1 {
   background-color: $light-yellow;
-
-  .picto {
-    max-width: 30%;
-    height: auto;
-    display: block;
-
-  }
 }
 
 .section1-article {
@@ -98,3 +90,6 @@
     background-size: 50%;
   }
 }
+
+
+  
